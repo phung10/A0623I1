@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let doanhthu = prompt("Nhập doanh thu:");
+    let hoahong
+    if (doanhthu <= 100000) {
+        hoahong = doanhthu  * 0.05;
+    } else if (doanhthu <= 500000) {
+        hoahong = doanhthu  * 0.1;
+    } else {
+        hoahong = doanhthu  * 0.15;
+    }
+    alert("Hoa hồng bạn nhận được: "+hoahong);
+</script>
+</body>
+</html>

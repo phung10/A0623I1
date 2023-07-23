@@ -9,6 +9,11 @@
             border-style: ridge;
             border-width: thin;
         }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body>
@@ -18,34 +23,46 @@
          <div style="background:palegreen">
          <p style="color:blue;"> <strong style="font-size: 40px ">Đăng ký học viên</strong> </p>
      </div>
-         <label><strong style="color: blue"> Họ và tên: </label></strong>
-            <input type="text" name="yourname">
+
+         <strong style="color: blue"> Họ và tên:</strong>
+         <label>
+             <input type="text" name="yourname">
+         </label>
          <br>
-         <br><label><strong style="color: blue" >Ngày sinh:</label></strong>
-         <input type="date" name="date">
+         <br><strong style="color: blue" >Ngày sinh:</strong>
+         <label>
+             <input type="date" name="date">
+         </label>
          <br>
-         <br><label><strong style="color: blue" >Giới tính :</label></strong>
+         <br><strong style="color: blue" >Giới tính :</strong>
          <label><input name="hobby" value="Nam" type="radio"/> Nam</label>
          <label><input name="hobby" value="Nữ" type="radio"/> Nữ</label> <br/>
-         <label><strong style="color: blue">  Địa chỉ:</label></strong>
-         <textarea style="margin-left: 20px" cols="50" rows="4"> </textarea>
+         <strong style="color: blue">  Địa chỉ:</strong>
+         <label>
+             <textarea style="margin-left: 20px" cols="50" rows="4"> </textarea>
+         </label>
          <br>
-         <br><label><strong style="color: blue" >Lớp :</label></strong></body>
-            <select style="margin-left: 36px" name="lop">
-    <option >cấp 1</option>
-    <option >cấp 2</option></select></br>
-   <br>
-  <label><strong style="color: blue">  Email:</label></strong>
-<input style="margin-left: 29px" type="text" name="email">
+         <br><strong style="color: blue" >Lớp :</strong>
+         <label>
+             <select style="margin-left: 36px" name="lop">
+     <option >cấp 1</option>
+     <option >cấp 2</option></select>
+         </label>
+         <br>
+  <strong style="color: blue">  Email:</strong>
+         <label>
+             <input style="margin-left: 29px" type="text" name="email">
+         </label>
+         <br>
+  <br><strong style="color: blue" >Điện thoại:</strong>
+         <label>
+             <input type="text" name="dt">
+         </label>
+         <br>
 <br>
-<br><label><strong style="color: blue" >Điện thoại:</label></strong>
-<input type="text" name="dt">
-<br>
-<br>
-<input style="margin-left: 80px" type="submit" value="Đăng ký"/</strong>
+<input style="margin-left: 80px" type="submit" value="Đăng ký">
 <input type="reset" value="Nhập lại"/>
-     </div>
-
+</div>
 </form>
 </body>
 </html>

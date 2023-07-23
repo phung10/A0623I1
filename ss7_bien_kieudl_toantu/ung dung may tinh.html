@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <h1>Caculator</h1>
+    <input id="gt1" type="text">
+    <input id="gt2" type="text">
+    <br>
+    <br>
+    <input onclick="cong()"style="width: 50px" type="button" value="+">
+    <input onclick="tru()" style="width: 50px"type="button" value="-">
+    <input onclick="nhan()" style="width: 50px"type="button" value="*">
+    <input onclick="chia()" style="width: 50px"type="button" value="/">
+</form>
+<div id="result" style="color: blue;"></div>
+<script>
+
+
+  function cong() {
+      let gt1 = document.getElementById('gt1').value;
+      let gt2 = document.getElementById('gt2').value;
+      let result = parseInt(gt1) + parseInt(gt2);
+      document.getElementById('result').innerHTML = 'result :' +result;
+  }
+ function tru() {
+     const gt1 = document.getElementById("gt1").value;
+     const gt2 = document.getElementById("gt2").value;
+     let result = parseInt(gt1) - parseInt(gt2);
+     document.getElementById("result").textContent = 'result :'+result
+}
+ function nhan() {
+     const gt1 = document.getElementById("gt1").value;
+     const gt2 = document.getElementById("gt2").value;
+     document.getElementById("result").textContent = 'result :'+gt1 * +gt2;
+}
+ function chia() {
+     const gt1 = document.getElementById("gt1").value;
+     const gt2 = document.getElementById("gt2").value;
+     document.getElementById("result").textContent = 'result :'+gt1 / +gt2;
+}
+
+</script>
+</body>
+</html>
