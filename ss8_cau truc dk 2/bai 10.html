@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tieuthu = parseInt(prompt("Số điện tiêu thụ"));
+    let thanhtien;
+    const bac1 = 1728;
+    const bac2 = 1786;
+    const bac3 = 2074;
+    const bac4 = 2612;
+    const bac5 = 2919;
+    const bac6 = 3015;
+    const VND= new Intl.NumberFormat('vi-VN', {
+        style: 'currency',
+        currency: 'VND',
+    });
+    if (tieuthu <= 50){
+        thanhtien = tieuthu * bac1;
+        alert("số tiền điện 1: " + VND.format(thanhtien) )
+    }else if ( tieuthu <=100){
+        thanhtien = (bac1 * 50) + ((tieuthu-50) * bac2);
+        alert("số tiền điện 2: " + VND.format(thanhtien))
+    }else if (tieuthu <= 200){
+        thanhtien = (bac1 * 50) + (bac2 * 50) + (tieuthu-100) * bac3;
+        alert("số tiền điện 3: " + VND.format(thanhtien))
+    }else if (tieuthu <= 300){
+        thanhtien = (bac1 * 50) + (bac2 * 50) + (bac3 * 100) + (tieuthu-200)*4;
+        alert("số tiền điện 4: " + VND.format(thanhtien))
+    }else if (tieuthu <= 400){
+        thanhtien = (bac1 * 50) + (bac2 * 50) + (bac3 * 100) + (bac4 * 100) + (tieuthu-300)*bac5;
+        alert("số tiền điện 5: " + VND.format(thanhtien))
+    }else {
+        thanhtien = (bac1 * 50) + (bac2 * 50) + (bac3 * 100) + (bac4 * 100) + (bac5 * 100) + (tieuthu-400)*bac6;
+        alert("số tiền điện 6: " + VND.format(thanhtien))
+    }
+
+
+
+
+</script>
+</body>
+</html>

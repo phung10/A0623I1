@@ -5,41 +5,23 @@
     <title>Title</title>
 </head>
 <body>
+<button onclick ="play()">Chơi !</button>
 <script>
-
-   for (let i=0;i<=5;i++) {
-       for (let j = 0; j < i; j++) {
-
-               a = document.write("*")
-       }
-       document.write("<br>")
-   }
-
-
-
-document.write("<br>")
-
-   for (let i=0;i<=5;i++){
-       for (let y=0;y<(5-i);y++){
-           document.write("*")
-       }
-       document.write("<br>")
-   }
-   document.write("<br>")
-
-   for (let i=1;i<=6;i++) {
-       for (let j = 0; j < i; j++) {
-           if(i>j){
-               document.write("&nbsp&nbsp")
-           }else {
-               document.write("*")
-           }
-
-       }
-       document.write("<br>")
-   }
-
-
+    function play(){
+        for ( let i = 0 ; i <=3; i++){
+            let a = +prompt(" Nhập số của bạn :")
+            if(a===10){
+                alert("Chúc mừng bạn đã chọn đúng .Mời chơi lại !!!")
+            }
+            else if ( a ===20){
+                alert("Gần đúng rồi .Cố lên nào !! ");
+            }
+            else {
+                alert("Mời bạn chọn lại ");
+            }
+        }
+    }
 </script>
+
 </body>
 </html>

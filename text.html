@@ -7,55 +7,23 @@
 <body>
 
 <script>
-
-    /*let sout;
-    sout = "<table border='1' width='00' cellspacing='0' cellpadding='3'>"
-    for (i = 2; i <= 9; i++) {
-        sout = sout + "<tr>";
-        for (j = 1; j <= 9; j++) {
-            sout = sout + "<td>"+i+" *"+j+"=" + i * j + "</td>";
-        }
+    let bool = 1;
+    let strA = prompt("Nhập vào chuỗi thứ nhất:");
+    let strB = prompt("Nhập vào chuỗi thứ hai:");
+    if(strA.length !== strB.length) {
+        alert("Hai chuỗi khác nhau!");
     }
-    document.write(sout);
-     */
-    for ( let i = 0; i < 5; i++) {
-        for (let j = 0; j <= i; j++) {
-            document.write("*");
+    else {
+        for(let i = 0;i < strA.length;i++) {
+            if(strA.charAt(i) !== strB.charAt(i)) {
+                bool = 0;
+            }
         }
-        document.writeln("<br/>")
-    }
-
-    document.write("<br/>");
-
-    for ( let i = 4; i >=0; i--) {
-        for (let j = 0; j <= i; j++) {
-            document.write("*");
+        if(bool === 1 ) {
+            alert("Hai chuỗi giống nhau");
+        }else {
+            alert("Hai chuỗi khác nhau");
         }
-        document.writeln("<br/>")
-    }
-
-    document.write("<br/>");
-
-    for ( let i = 0; i < 5; i++) {
-        for (let j = 0; j < 5-i ; j++) {
-            document.write("&nbsp&nbsp;");
-        }
-        for (let k = 0; k <= i; k++) {
-            document.write("*");
-        }
-        document.writeln("<br/>")
-    }
-
-    document.write("<br/>");
-
-    for ( let i = 4; i>=0; i--) {
-        for (let j = 0; j < 5-i ; j++) {
-            document.write("&nbsp&nbsp;");
-        }
-        for (let k = 0; k <= i; k++) {
-            document.write("*");
-        }
-        document.writeln("<br/>")
     }
 </script>
 </body>

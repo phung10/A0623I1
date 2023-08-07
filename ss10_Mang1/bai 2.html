@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number =[]
+
+
+    for(let i=1;i<4;i++){
+        number[i]=parseInt(prompt("Nhap so thu "+i))
+    }
+    let max=0;
+    let index = 0;
+    for (let i=0;i<number.length;i++){
+        if(number[i]>max){
+            max = number[i];
+            index = i;
+        }
+    }
+    alert("so lon nhat la "+max+" tai vi tri "+index+"")
+</script>
+</body>
+</html>
