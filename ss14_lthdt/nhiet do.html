@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Temperature = function (c) {
+        this.c = c
+
+     this.getc = function () {
+       return c
+        }
+     this.dof = function () {
+      return c*1.8+32
+     }
+     this.doKevin = function () {
+       return c + 237.15
+     }
+    }
+    let temperature = new Temperature(23)
+    // let doF=temperature.doF
+    // let doK=temperature.doKevin.
+    alert("sang do F la"+temperature.dof() + "\n" +"sang do Kevin la "+temperature.doKevin())
+    
+</script>
+</body>
+</html>

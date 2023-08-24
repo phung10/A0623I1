@@ -2,29 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ham_1.04</title>
+    <style>
+    #khung{
+        width: 400px;
+        border-radius: 10px;
+        border: 10px solid black;
+        margin-top: 1px;
+        margin-left: 550px;
+    }
+        #tivi{
+            width: 500px;
+            border: 10px solid black;
+            border-radius: 10px;
+            height: 300px;
+            margin-top: 200px;
+            margin-left: 500px;
+            background: black;
+        }
+        #dieukhien{
+
+            border-radius: 10px;
+            border: 10px solid black;
+            height: 170px;
+            width: 200px;
+            margin-left: 200px;
+            margin-top: 10px;
+        }
+
+    </style>
 </head>
 <body>
+<div id="tivi"></div>
+<div id="khung"></div>
+<div id="dieukhien">
+    <button onclick="nhannut(0)" style="margin-left: 25px; width: 150px ; margin-top: 5px">on/off</button>
+    <button onclick="nhannut(1)" style="margin-left: 30px ; margin-top: 10px">1</button>
+    <button onclick="nhannut(2)" style="margin-left: 30px">2</button>
+    <button onclick="nhannut(3)" style="margin-left: 30px">3</button>
+    <button onclick="nhannut(4)" style="margin-left: 30px ; margin-top: 10px">4</button>
+    <button onclick="nhannut(5)" style="margin-left: 30px">5</button>
+    <button onclick="nhannut(6)" style="margin-left: 30px">6</button>
+    <button onclick="nhannut(7)" style="margin-left: 30px ; margin-top: 10px">7</button>
+    <button onclick="nhannut(8)" style="margin-left: 30px">8</button>
+    <button onclick="nhannut(9)" style="margin-left: 30px">9</button>
+
+
+</div>
 
 <script>
-    let bool = 1;
-    let strA = prompt("Nhập vào chuỗi thứ nhất:");
-    let strB = prompt("Nhập vào chuỗi thứ hai:");
-    if(strA.length !== strB.length) {
-        alert("Hai chuỗi khác nhau!");
+    let onoff = true
+    function nhannut(number) {
+                if (onoff=true) {
+                    document.getElementById("tivi").innerHTML = ""
+                    document.getElementById("tivi").style.backgroundColor = "white"
+                    switch (number) {
+                        case 1 :
+                            document.getElementById("tivi").innerHTML = ""
+                            document.getElementById("tivi").style.backgroundColor = "red"
+                            break
+                        case 2 :
+                            document.getElementById("tivi").innerHTML = ""
+                            document.getElementById("tivi").style.backgroundColor = "red"
+                            break
+                        case 3 :
+                            document.getElementById("tivi").innerHTML = ""
+                            document.getElementById("tivi").style.backgroundColor = "red"
+                            break
+                        case 4 :
+                            document.getElementById("tivi").innerHTML = ""
+                            document.getElementById("tivi").style.backgroundColor = "red"
+                            break
+                        case 5:
+                            document.getElementById("tivi").innerHTML = ""
+                            document.getElementById("tivi").style.backgroundColor = "red"
+                            break
+                        case 6 :
+                            document.getElementById("tivi").innerHTML = ""
+                            document.getElementById("tivi").style.backgroundColor = "red"
+                            break
+                    }
+                }
+
+
     }
-    else {
-        for(let i = 0;i < strA.length;i++) {
-            if(strA.charAt(i) !== strB.charAt(i)) {
-                bool = 0;
-            }
-        }
-        if(bool === 1 ) {
-            alert("Hai chuỗi giống nhau");
-        }else {
-            alert("Hai chuỗi khác nhau");
-        }
-    }
+
 </script>
 </body>
 </html>
