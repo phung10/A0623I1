@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tinhgiathua() {
+        let nhap = parseInt(prompt("Nhập số cần tính giai thừa"))
+        let nFact =1;
+        for( let i = nhap; i > 0; i--){
+            nFact = nFact * i;
+        }
+        return nFact
+    }
+    result = tinhgiathua();
+    alert("result: " + result)
+</script>
+</body>
+</html>

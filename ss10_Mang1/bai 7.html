@@ -6,8 +6,23 @@
 </head>
 <body>
 <script>
-
-
+    let arr = [];
+    function check(arr, V) {
+        return arr.includes(V);
+    }
+    for (let i = 0; i < 5; i++) {
+        arr[i] = parseInt(prompt("Nhập phần tử thứ "+ (i + 1)+ " của mảng:"));
+        document.writeln("arr[" + i + "]=" + arr[i] + "<br>");
+    }
+    let V = parseInt(prompt("Enter a v :"));
+    if (check(arr, V)) {
+        document.writeln("V is in the array");
+        const index = arr.indexOf(V);
+        arr.splice(index,1)
+        document.writeln(arr);
+    } else {
+        document.writeln("V is not in the array");
+    }
 </script>
 </body>
 </html>

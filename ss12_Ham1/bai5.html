@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ten = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let chomsao =["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function check(a) {
+        for (i = 0; i < ten.length; i++){
+            if( a === ten[i]){
+                alert(a + " belong to " +chomsao[i]);
+                return;
+            }
+        }
+        alert("không tìm thấy");
+    }
+    let nhap = prompt("Nhập tên ca sĩ");
+    check(nhap);
+</script>
+</body>
+</html>
