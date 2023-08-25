@@ -16,21 +16,35 @@
             border: 10px solid black;
             border-radius: 10px;
             height: 300px;
-            margin-top: 200px;
+            margin-top: 5px;
             margin-left: 500px;
             background: black;
         }
         #dieukhien{
             border-radius: 10px;
             border: 10px solid black;
-            height: 200px;
+            height: 220px;
             width: 200px;
             margin-left: 200px;
             margin-top: 10px;
         }
+        img{
+            width: 500px;
+            height: 300px;
+        }
+        #loa{
+            width: 300px;
+            height: 100px;
+            border-radius: 10px;
+            border: 10px solid black;
+            margin-top: 1px;
+            margin-left: 600px;
+        }
     </style>
 </head>
 <body>
+
+<div id="loa"></div>
 <div id="tivi"></div>
 <div id="khung"></div>
 <div id="dieukhien">
@@ -47,16 +61,18 @@
     <button onclick="nhannut(9)" style="margin-left: 30px">9</button>
     <button  onclick="nhannut(11)" style="margin-left: 30px ; margin-top: 10px">+</button>
     <button onclick="nhannut(12)" style="margin-left: 30px ; margin-top: 10px">-</button>
-    <img src="">
+    <button onclick="nhannut(13)" style="margin-left: 25px ; width: 150px; margin-top: 10px">coi giờ</button>
 
 </div>
-
 <script>
+
     let q = 0
     var soHienTai = 0;
 
 
     function bat(number) {
+
+
         let onoff = true
         if (number === 0) {
             q = 1
@@ -71,31 +87,44 @@
         }
     }
     function nhannut(number) {
+
         if (q === 1) {
             switch (number) {
                 case 1 :
-                    document.getElementById("tivi").innerHTML = "Kênh 1"
-                    document.getElementById("tivi").style.backgroundColor = "red"
+                    document.getElementById("tivi").innerHTML = ""
+                    var img = document.createElement("img")
+                    img.src = "bay.jpg"
+                   document.getElementById("tivi").appendChild(img)
                     break
                 case 2 :
-                    document.getElementById("tivi").innerHTML = "Kênh 2"
-                    document.getElementById("tivi").style.backgroundColor = "pink"
+                    document.getElementById("tivi").innerHTML = ""
+                    var img = document.createElement("img")
+                    img.src = "1.jpg.png"
+                    document.getElementById("tivi").appendChild(img)
                     break
                 case 3 :
-                    document.getElementById("tivi").innerHTML = "Kênh 3"
-                    document.getElementById("tivi").style.backgroundColor = "green"
+                    document.getElementById("tivi").innerHTML = ""
+                    var img = document.createElement("img")
+                    img.src = "2.png"
+                    document.getElementById("tivi").appendChild(img)
                     break
                 case 4 :
-                    document.getElementById("tivi").innerHTML = "Kênh 4"
-                    document.getElementById("tivi").style.backgroundColor = "Yellow "
+                    document.getElementById("tivi").innerHTML = ""
+                    var img = document.createElement("img")
+                    img.src = "3.png"
+                    document.getElementById("tivi").appendChild(img)
                     break
                 case 5 :
-                    document.getElementById("tivi").innerHTML = "Kênh 5"
-                    document.getElementById("tivi").style.backgroundColor = "Orange "
+                    document.getElementById("tivi").innerHTML = ""
+                    var img = document.createElement("img")
+                    img.src = "4.png"
+                    document.getElementById("tivi").appendChild(img)
                     break
                 case 6 :
-                    document.getElementById("tivi").innerHTML = "Kênh 6"
-                    document.getElementById("tivi").style.backgroundColor = "Brown "
+                    document.getElementById("tivi").innerHTML = ""
+                    var img = document.createElement("img")
+                    img.src = "5.png"
+                    document.getElementById("tivi").appendChild(img)
                     break
                 case 7 :
                     document.getElementById("tivi").innerHTML = "Kênh 7"
@@ -116,28 +145,32 @@
                     break
                 case 11 :
                     if(soHienTai>=100){
-                        document.getElementById("tivi").innerHTML = "không thể to hơn nữa"
+                        document.getElementById("loa").innerHTML = "không thể to hơn nữa"
                         soHienTai = 100
                     }else {
                         soHienTai++;
-                        document.getElementById("tivi").innerHTML ="âm lượng đang là " +soHienTai
+                        document.getElementById("loa").innerHTML ="âm lượng đang là " +soHienTai
                     }
                     break
                 case 12 :
                     if(soHienTai<=0){
-                        document.getElementById("tivi").innerHTML = "không thể nhỏ hơn nữa"
+                        document.getElementById("loa").innerHTML = "không thể nhỏ hơn nữa"
                         soHienTai = 1
                     }else {
                         soHienTai--;
-                        document.getElementById("tivi").innerHTML ="âm lượng đang là " +soHienTai
+                        document.getElementById("loa").innerHTML ="âm lượng đang là " +soHienTai
                     }
                     break
+                case 13 :
+                    document.getElementById("loa").innerHTML = "bây giờ là 9 giờ 53 (10 giờ kém 7)"
+                    break
+
             }
         }else {
             alert("tivi đăng tắt hãy bật lên")
         }
-
     }
+
 </script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+<script>
+    let TN = parseInt(prompt("Nhập thu nhập của bạn "))
+    const VND= new Intl.NumberFormat('vi-VN', {
+        style: 'currency',
+        currency: 'VND',
+    });
+    let thue;
+    if (10000000<=TN && TN<=18000000){
+        thue = TN * (15/100)
+        alert("tiền thuế phải trả " + VND.format(thue) );
+    }else if (18000000<TN && TN<=32000000){
+        thue = TN * (20/100);
+        alert("tiền thuế phải trả " +  VND.format(thue) );
+    }else if (32000000<TN && TN<=52000000){
+        thue = TN * (25/100);
+        alert("tiền thuế phải trả " +  VND.format(thue));
+    }else if (52000000<TN && TN<=80000000){
+        thue = TN * (30/100);
+        alert("tiền thuế phải trả " +  VND.format(thue) );
+    }else {
+        thue = TN * (35/100);
+        alert("tiền thuế phải trả " +  VND.format(thue));
+    }
+
+</script>
+</body>
+</html>

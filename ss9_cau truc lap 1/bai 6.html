@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function tong30sochiahetcho7() {
+        let sum = 0;
+        let count = 0;
+        let number = 1;
+        while (count < 30) {
+            if (number % 7 === 0) {
+                sum += number;
+                count++;
+            }
+            number++;
+        }
+        return sum;
+    }
+    result = tong30sochiahetcho7();
+    document.write("Tổng 30 số chia hết cho 7:", result)
+</script>
+</body>
+</html>
